@@ -4,4 +4,4 @@ Disallow: /404.html
 Disallow: /500.html
 Disallow: /error.html
 
-Sitemap: https://rose-aloe.example.com/sitemap.xml
+Sitemap: https://mbilalsiddiqi.github.io/rose-aloe/sitemap.xml

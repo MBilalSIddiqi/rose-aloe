@@ -85,16 +85,16 @@ Every functional change MUST add an entry to the **top** of `HISTORY.md`. Templa
 - outcome 2
 ```
 
-## Placeholders Used in the Codebase
+## Production Configuration
 
-These were left as placeholders during the production-readiness port. Replace before deployment:
+Current production values wired into the site:
 
-| Placeholder | Where | Replace with |
+| Value | Where | Notes |
 |---|---|---|
-| `https://rose-aloe.example.com` | `sitemap.xml`, `robots.txt`, JSON-LD on `index.html` | Real production domain |
-| `G-1NRXSBRQMY` | `ga.js` | Real GA4 measurement ID |
-| `+92 334 3601488` | `script.js` (`WHATSAPP_PHONE_NUMBER`), various contact pages | Real WhatsApp number, if different |
-| `info@pureessencesoaps.com` | `contact.html`, `refund.html` | Real support email |
+| `https://mbilalsiddiqi.github.io/rose-aloe` | `sitemap.xml`, `robots.txt`, JSON-LD on `index.html` | GitHub Pages URL — change here if a custom domain is added |
+| `G-1NRXSBRQMY` | `ga.js` | GA4 measurement ID |
+| `+92 334 3601488` | `script.js` (`WHATSAPP_PHONE_NUMBER`) | Brand WhatsApp number — single source of truth |
+| `bintesamin@gmail.com` | `contact.html`, `refund.html`, `term.html`, `privacy.html` | Support email |
 
 ## Quick Commands
 
