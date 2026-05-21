@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favicon Generator | Rose Aloe</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f6efe5;
+      color: #2d2019;
+      margin: 0;
+      padding: 2rem;
+      display: grid;
+      gap: 1.5rem;
+      place-items: center;
+    }
+    h1 { margin: 0; font-family: Georgia, serif; }
+    .row { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .tile {
+      background: #fff8f2;
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: 0 14px 32px rgba(74, 45, 31, 0.08);
+      display: grid;
+      gap: 0.75rem;
+      justify-items: center;
+    }
+    canvas { background: transparent; }
+    button {
+      border: 0;
+      background: #b2603b;
+      color: #fff9f3;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #8f4427; }
+    p.muted { color: #6f594f; font-size: 0.9rem; max-width: 36rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>Favicon Generator</h1>
+  <p class="muted">
+    Generates raster favicons in the Rose Aloe palette (#b2603b → #8f4427) with a "BS" monogram.
+    Download each file and drop it into the site/ folder.
+  </p>
+  <div class="row">
+    <div class="tile">
+      <canvas id="canvas32" width="32" height="32"></canvas>
+      <button data-size="32" data-name="favicon-32.png">Download favicon-32.png</button>
+    </div>
+    <div class="tile">
+      <canvas id="canvas180" width="180" height="180"></canvas>
+      <button data-size="180" data-name="apple-touch-icon.png">Download apple-touch-icon.png</button>
+    </div>
+    <div class="tile">
+      <canvas id="canvas512" width="512" height="512"></canvas>
+      <button data-size="512" data-name="og-image.png">Download og-image.png</button>
+    </div>
+  </div>
+  <p class="muted">
+    For a true favicon.ico (multi-resolution), upload the SVG to
+    <a href="https://realfavicongenerator.net" target="_blank" rel="noopener">realfavicongenerator.net</a>.
+  </p>
+  <script>
+    function drawFavicon(canvas, size) {
+      const ctx = canvas.getContext("2d");
+      const radius = size * 0.22;
+      const gradient = ctx.createLinearGradient(0, 0, size, size);
+      gradient.addColorStop(0, "#b2603b");
+      gradient.addColorStop(1, "#8f4427");
+
+      ctx.beginPath();
+      ctx.moveTo(radius, 0);
+      ctx.lineTo(size - radius, 0);
+      ctx.quadraticCurveTo(size, 0, size, radius);
+      ctx.lineTo(size, size - radius);
+      ctx.quadraticCurveTo(size, size, size - radius, size);
+      ctx.lineTo(radius, size);
+      ctx.quadraticCurveTo(0, size, 0, size - radius);
+      ctx.lineTo(0, radius);
+      ctx.quadraticCurveTo(0, 0, radius, 0);
+      ctx.closePath();
+      ctx.fillStyle = gradient;
+      ctx.fill();
+
+      ctx.fillStyle = "#f6efe5";
+      ctx.font = `700 ${size * 0.5}px "Cormorant Garamond", Georgia, serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText("BS", size / 2, size / 2 + size * 0.02);
+    }
+
+    function download(size, name) {
+      const canvas = document.getElementById(`canvas${size}`);
+      const link = document.createElement("a");
+      link.download = name;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      [32, 180, 512].forEach((size) => drawFavicon(document.getElementById(`canvas${size}`), size));
+      document.querySelectorAll("button[data-size]").forEach((btn) => {
+        btn.addEventListener("click", () => download(Number(btn.dataset.size), btn.dataset.name));
+      });
+    });
+  </script>
+</body>
+</html>

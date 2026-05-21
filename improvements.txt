@@ -1,0 +1,31 @@
+What has been added
+
+- Multipage storefront structure with dedicated pages for home, shop, about, contact, and FAQ.
+- Dedicated product pages for individual soaps, serums, shampoos, face washes, and gift sets.
+- Shared product data setup for consistent rendering across listing pages and detail pages.
+- Improved homepage hero with a cinematic brand banner and stronger visual hierarchy.
+- Smarter shop search with ranked matching, aliases, and live search suggestions.
+- Product cards refined with cleaner actions, tags, prices, and links to detail pages.
+- Contact page redesigned with a branded hero, contact cards, message form, and FAQ preview section.
+- FAQ page added with grouped accordion sections and a call-to-action support panel.
+- Product detail visuals split by product type:
+  - soaps show as bars
+  - serums use slimmer bottles
+  - shampoos and face washes use bottle-only visuals
+  - gift sets use a wrapped gift-box visual
+- Cart persists across pages with localStorage.
+
+What can be improved next
+
+- Add real product photography instead of CSS-built product visuals.
+- Make the gift-set detail visual look more like a premium hamper or rigid box with more depth.
+- Add a mobile menu for smaller screens.
+- Turn the contact form and FAQ CTA into working WhatsApp or email flows.
+- Add product image galleries and thumbnails on detail pages.
+- Add related-products sections on product pages.
+- Improve product filtering with price, concern, and category filters.
+- Add highlighted matching text inside live search suggestions.
+- Add a proper checkout flow with order summary, shipping form, and payment integration.
+- Add hover animations and scroll reveals sparingly for a more premium feel.
+- Add accessibility improvements like stronger accordion keyboard support and clearer form validation states.
+- Add a backend or CMS for managing products instead of editing static files manually.
