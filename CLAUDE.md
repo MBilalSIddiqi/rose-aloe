@@ -92,7 +92,7 @@ These were left as placeholders during the production-readiness port. Replace be
 | Placeholder | Where | Replace with |
 |---|---|---|
 | `https://rose-aloe.example.com` | `sitemap.xml`, `robots.txt`, JSON-LD on `index.html` | Real production domain |
-| `G-XXXXXXXXXX` | `ga.js` | Real GA4 measurement ID |
+| `G-1NRXSBRQMY` | `ga.js` | Real GA4 measurement ID |
 | `+92 334 3601488` | `script.js` (`WHATSAPP_PHONE_NUMBER`), various contact pages | Real WhatsApp number, if different |
 | `info@pureessencesoaps.com` | `contact.html`, `refund.html` | Real support email |
 
