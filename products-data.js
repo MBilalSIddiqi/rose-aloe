@@ -7,7 +7,7 @@ window.PRODUCTS = [
     description:
       "A botanical facial serum infused with rose and saffron notes to support a soft, radiant finish.",
     longDescription:
-      "Rose and Saffron Serum is designed for customers who want a refined glow ritual with a soft floral character. It layers easily into both morning and evening routines and feels especially fitting for gifting or vanity display.",
+      "Rose and Saffron Serum is designed for customers who want a refined glow ritual with a soft floral character. It layers easily into both morning and evening routines.",
     price: 2450,
     badge: "Bestseller",
     rating: "4.9",
@@ -15,7 +15,7 @@ window.PRODUCTS = [
     category: ["bestseller", "skin-soothing", "serum", "featured"],
     notes: ["Glow care", "Floral", "Daily ritual"],
     collection: "Glow Care",
-    benefits: ["Radiance support", "Light layering", "Gift-friendly"],
+    benefits: ["Radiance support", "Light layering", "Daily ritual"],
     ritual:
       "Apply after cleansing and before moisturizer as part of a morning or evening glow routine.",
     ingredients: ["Rose-inspired care", "Saffron notes", "Botanical hydration"],
@@ -86,50 +86,6 @@ window.PRODUCTS = [
       "Massage into wet hair as part of a slower shower routine, then rinse for a clean but gentle finish.",
     ingredients: ["Lavender character", "Botanical shampoo base", "Soft-rinse feel"],
     color: "linear-gradient(160deg, #a28bb1, #765d86)",
-  },
-  {
-    id: "signature-box",
-    path: "signature-box.html",
-    name: "Signature Care Box",
-    tagline: "Soap, serum, and hair care wrapped for gifting",
-    description:
-      "A curated gift-ready set with signature soaps, serum, shampoo, and botanical cards in a keepsake presentation box.",
-    longDescription:
-      "Signature Care Box is the brand's most complete gifting expression. It is ideal for birthdays, bridal hampers, hosting gifts, or anyone who wants to experience multiple categories at once.",
-    price: 7200,
-    badge: "Gift Edit",
-    rating: "5.0",
-    size: "4-piece set",
-    category: ["gifting", "bestseller", "featured"],
-    notes: ["Ribbon wrapped", "Skincare", "Bridal hampers"],
-    collection: "Gifting",
-    benefits: ["Multi-category edit", "Gift-ready presentation", "Premium keepsake feel"],
-    ritual:
-      "Use as a complete care gift or split across bath, skin, and hair rituals over the week.",
-    ingredients: ["Soap selection", "Serum inclusion", "Shampoo ritual"],
-    color: "linear-gradient(160deg, #8c6470, #5d3d49)",
-  },
-  {
-    id: "mini-discovery",
-    path: "mini-discovery.html",
-    name: "Mini Discovery Set",
-    tagline: "A starter edit across skin and hair care",
-    description:
-      "A lower-commitment set designed to help new customers sample bestselling soap, serum, and shampoo formulas before choosing full sizes.",
-    longDescription:
-      "Mini Discovery Set lowers the entry point for first-time customers. It is especially useful for gifting, travel, or anyone who wants to test the brand's skin and hair range before committing.",
-    price: 3150,
-    badge: "Starter Set",
-    rating: "4.8",
-    size: "3 mini essentials",
-    category: ["gifting", "featured"],
-    notes: ["Trial size", "Travel", "Skin + hair"],
-    collection: "Discovery",
-    benefits: ["Trial-friendly", "Travel-ready", "Multi-category sampler"],
-    ritual:
-      "Use across a few days to experience the brand's signature skin and hair rituals in smaller sizes.",
-    ingredients: ["Soap sample", "Serum sample", "Shampoo sample"],
-    color: "linear-gradient(160deg, #c5926a, #8c5f3d)",
   },
   {
     id: "argan-repair",

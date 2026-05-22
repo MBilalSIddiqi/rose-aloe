@@ -36,17 +36,7 @@ if (productData) {
   if (bottle) {
     bottle.setAttribute("data-label", productData.name);
 
-    if (
-      productData.category.includes("gifting") ||
-      productData.size.toLowerCase().includes("set")
-    ) {
-      bottle.classList.add("is-gift");
-      bottle.innerHTML =
-        '<span class="gift-lid-seam"></span><span class="gift-tissue"></span><span class="gift-ribbon-horizontal"></span><span class="gift-ribbon-knot"></span><span class="gift-tag">Gift Edit</span>';
-      if (visual) {
-        visual.classList.add("visual-gift", "visual-bottle-minimal");
-      }
-    } else if (productData.size.toLowerCase().includes("bar")) {
+    if (productData.size.toLowerCase().includes("bar")) {
       bottle.classList.add("is-soap");
       bottle.style.background = productData.color;
       if (visual) {

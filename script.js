@@ -103,7 +103,6 @@ const searchAliases = {
   shampoo: ["shampoo", "hair", "haircare", "wash", "repair", "rinse"],
   "face wash": ["face", "facewash", "face-wash", "cleanser", "wash", "cleanse"],
   soap: ["soap", "bar", "bars", "cleansing bar"],
-  gifting: ["gift", "gifting", "box", "set", "bundle", "hamper"],
   "oily skin": ["oily", "oil", "detox", "purifying", "clarifying", "charcoal", "tea tree"],
   skincare: ["skincare", "skin", "face", "glow", "hydration", "calming"],
   haircare: ["haircare", "hair", "shampoo", "repair", "lavender", "argan"],
@@ -121,7 +120,7 @@ const homeReviews = [
     name: "Sarah Ahmed",
     rating: 5,
     text:
-      "I ordered a gift set for a birthday and everything arrived looking so thoughtfully prepared. It felt premium without being overdone, which is exactly what I wanted.",
+      "The Charcoal Detox Bar gave my skin a cleaner-feeling rinse without the tightness I sometimes get from clarifying bars. Worth keeping in rotation.",
     date: "February 2026",
   },
   {
@@ -301,7 +300,7 @@ function renderProducts() {
     resultsSummary.textContent =
       renderedProducts.length > 0
         ? `Showing ${renderedProducts.length} product${renderedProducts.length === 1 ? "" : "s"} for your current view.`
-        : "No products match this search yet. Try a different scent, category, or gift term.";
+        : "No products match this search yet. Try a different scent or category.";
   }
 }
 
@@ -537,7 +536,7 @@ function renderCart() {
     const emptyState = document.createElement("div");
     emptyState.className = "cart-empty";
     emptyState.textContent =
-      "Your basket is empty. Add handcrafted bars or a gift set to start building your order.";
+      "Your basket is empty. Add a handcrafted bar, serum, or shampoo to start building your order.";
     cartItems.appendChild(emptyState);
   } else {
     cart.forEach((item) => {
