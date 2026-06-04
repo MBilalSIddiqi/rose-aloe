@@ -4,6 +4,25 @@ Newest entries at the top.
 
 ---
 
+### v1.3 — 2026-06-04
+**Fix overlapping header text on mobile**
+
+**Issue:** On phones the header brand block overlapped the Menu/Cart buttons. The brand lockup carried a two-line stack — the long "Handcrafted Botanical Care" eyebrow plus the "Rose Aloe" name — and the eyebrow wrapped and collided with the right-side actions in the narrow `minmax(0, 1fr) auto` header grid.
+
+**Solution Implemented:**
+1. Hid the decorative `.eyebrow` tagline at ≤720px (kept on tablet/desktop), leaving a clean single-line brand name.
+2. Set `.brand-name { white-space: nowrap }` so it never wraps into the actions.
+3. Re-centered `.brand-mark` vertically (`align-items: center`) and tightened its gap now that the lockup is one line; removed the now-unneeded lockup top padding.
+
+**Files Modified:**
+- `styles.css` — `@media (max-width: 720px)` brand/header rules
+
+**Result:**
+- No header overlap on phones; seal + "Rose Aloe" sit on one line with Menu/Cart cleanly to the right.
+- Site-wide (shared header markup), so all pages benefit.
+
+---
+
 ### v1.2 — 2026-06-04
 **Fix mobile horizontal overflow (page rendered zoomed-out)**
 
