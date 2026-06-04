@@ -3170,17 +3170,21 @@ h3 {
   .site-header {
     position: static;
     margin-top: 0.75rem;
-    grid-template-columns: minmax(0, 1fr) auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
     min-height: auto;
-    gap: 0.7rem 0.9rem;
+    gap: 0.7rem;
     padding: 0.85rem 0.95rem;
     border-radius: 1.45rem;
   }
 
   .brand-mark {
+    order: 2;
     align-items: center;
     gap: 0.6rem;
     min-width: 0;
+    margin-right: auto;
   }
 
   .brand-seal {
@@ -3210,12 +3214,12 @@ h3 {
   }
 
   .header-actions {
-    justify-content: flex-end;
-    width: auto;
-    gap: 0.7rem;
+    display: contents;
   }
 
   .mobile-menu-toggle {
+    order: 1;
+    flex: 0 0 auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -3257,6 +3261,8 @@ h3 {
   }
 
   .cart-button {
+    order: 3;
+    flex: 0 0 auto;
     min-height: 2.85rem;
     padding: 0.68rem 0.98rem;
     gap: 0.58rem;

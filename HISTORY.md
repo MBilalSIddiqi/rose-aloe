@@ -4,6 +4,24 @@ Newest entries at the top.
 
 ---
 
+### v1.5 — 2026-06-04
+**Move mobile hamburger to the left of the logo**
+
+**Issue:** The hamburger toggle sat on the right with the cart; requested it before (left of) the Rose Aloe logo.
+
+**Solution Implemented:**
+1. At ≤720px, switched `.site-header` from grid to flex.
+2. Set `.header-actions { display: contents }` so its children (toggle + cart) become direct flex items of the header.
+3. Ordered the row: hamburger (`order: 1`) → brand mark (`order: 2`, `margin-right: auto`) → cart (`order: 3`), so the menu icon leads, the logo follows, and the cart stays pinned right.
+
+**Files Modified:**
+- `styles.css` — `@media (max-width: 720px)` header/brand/actions rules
+
+**Result:**
+- Mobile header reads: ≡  Rose Aloe … Cart. Shared header markup, so all pages benefit.
+
+---
+
 ### v1.4 — 2026-06-04
 **Replace mobile "Menu" text with hamburger icon**
 
