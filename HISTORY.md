@@ -4,6 +4,24 @@ Newest entries at the top.
 
 ---
 
+### v1.4 — 2026-06-04
+**Replace mobile "Menu" text with hamburger icon**
+
+**Issue:** The mobile header toggle showed an icon plus the word "Menu". Requested a cleaner three-equal-lines (hamburger) icon with no text.
+
+**Solution Implemented:**
+1. Hid the `.mobile-menu-toggle-label` ("Menu") text at ≤720px.
+2. Rebuilt the `::before` icon as three equal full-width lines (top + bottom borders plus a centered 2px gradient line); made the button a compact 2.85rem circle.
+3. The open state still morphs into an X. The button keeps its existing `aria-label="Open menu"`, so removing the visible text doesn't affect screen readers.
+
+**Files Modified:**
+- `styles.css` — `@media (max-width: 720px)` `.mobile-menu-toggle` rules
+
+**Result:**
+- Compact hamburger (three equal lines) replaces the "Menu" label on mobile; shared header markup, so all pages benefit.
+
+---
+
 ### v1.3 — 2026-06-04
 **Fix overlapping header text on mobile**
 
