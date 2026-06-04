@@ -4,6 +4,23 @@ Newest entries at the top.
 
 ---
 
+### v1.2 — 2026-06-04
+**Fix mobile horizontal overflow (page rendered zoomed-out)**
+
+**Issue:** On phones the whole page rendered shrunk-to-fit (tiny text, "unresponsive" look) even though the mobile breakpoints exist. Cause: the decorative `.ambient-orb` elements are `position: fixed; width: 22rem` pulled partly off-screen (`orb-left { left: -10rem }`, `orb-right { right: -8rem }`). Fixed-position elements are clipped by the viewport/`<html>`, not `body`, so the existing `body { overflow-x: hidden }` never caught them — the orbs overhung the right edge, creating horizontal overflow and forcing mobile browsers to zoom the page out.
+
+**Solution Implemented:**
+1. Added `overflow-x: hidden` to the `html` rule so the off-screen fixed orbs are clipped to the viewport.
+
+**Files Modified:**
+- `styles.css` — `html { ... }` now also sets `overflow-x: hidden`
+
+**Result:**
+- No horizontal overflow on phones; the page renders at correct scale and the existing mobile breakpoints apply as intended.
+- Site-wide fix (orbs + body-only clip were global), so all pages benefit.
+
+---
+
 ### v1.1 — 2026-05-21
 **Production values wired in; rebrand to Rose Aloe; deploy**
 

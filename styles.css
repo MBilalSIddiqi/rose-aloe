@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -393,8 +394,9 @@ h3 {
   position: relative;
   min-height: 31rem;
   margin-top: 0.9rem;
-  margin-left: calc((100vw - min(1180px, calc(100% - 2rem))) / -2 + 2rem);
-  width: calc(100vw - 2rem);
+  /* Full-width within the centered page-shell. Avoids 100vw, which includes
+     the scrollbar gutter and caused horizontal overflow on mobile. */
+  width: 100%;
   padding: 0 2rem;
   border: 0;
   border-radius: 2rem;
